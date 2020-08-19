@@ -6,7 +6,7 @@ public class PuzzleJavaTest {
 
         // puzzle.alphabet();
 
-        // puzzle.rand10();
+        puzzle.rand10();
         //puzzle.randString();
     }
 }

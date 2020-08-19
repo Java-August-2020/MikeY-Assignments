@@ -22,8 +22,6 @@ public class GorillaTest {
         //eat a 2nd banana
         gorilla1.eatBananas();
         gorilla1.displayEnergyLevel();
-
-
         
     }
 }

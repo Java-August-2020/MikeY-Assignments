@@ -5,12 +5,12 @@ public class Project{
     public Project() {
     }
 
-    //overload the method 2)
+    //overload the method 1)
     public Project(String name) {
         this.name = name;
     }
 
-    //overload the method 3)
+    //overload the method 2)
     public Project(String name, String description) {
         this.name = name;
         this.description = description;
