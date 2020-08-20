@@ -1,0 +1,17 @@
+h2 {
+	margin: 200px;
+	color: green;
+	text-align: center;
+}
+
+h1 {
+	margin: 200px;
+	color: blue;
+	text-align: center;
+}
+
+a {
+	margin:200px;
+ 	display: inline;
+
+}
