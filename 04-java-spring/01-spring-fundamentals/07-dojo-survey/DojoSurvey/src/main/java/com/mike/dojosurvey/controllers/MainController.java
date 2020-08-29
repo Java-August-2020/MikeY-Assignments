@@ -17,9 +17,7 @@ public class MainController {
 	public String results(@RequestParam(value="name") String name,
 						 @RequestParam(value="location") String location,
 						 @RequestParam(value="language") String language, 
-						 @RequestParam(value="message") String message,
-						 
-						 Model viewModel){
+						 @RequestParam(value="message") String message, Model viewModel){
 		viewModel.addAttribute("name", name);
 		viewModel.addAttribute("location", location);
 		viewModel.addAttribute("language", language);

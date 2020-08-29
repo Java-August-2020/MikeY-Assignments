@@ -20,7 +20,7 @@ public class HomeController {
 	}
 	@RequestMapping(value="/attempt", method=RequestMethod.POST)
 	public String attempt(@RequestParam(value="guess") String guess,
-			Model model, RedirectAttributes Attributes) {
+			RedirectAttributes Attributes) {
 		if(isCorrectCode(guess)) {
 			return "redirect:/code";
 		}
