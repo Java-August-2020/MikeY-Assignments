@@ -25,7 +25,7 @@ public class Book {
 	@Size(min=1, max=20)
 	@NotBlank
 	private String title;
-	@Size(min=3, max=20)
+	@Size(min=3, max=100)
 	private String description;
 	private String language;
 	private Integer pages;
@@ -49,6 +49,17 @@ public class Book {
 	public Book() {
 		
 	}
+	
+	//overloaded method
+
+	public Book(@NotBlank @Size(min = 1, max = 20) @NotBlank String title, @Size(min = 3, max = 20) String description,
+			String language, Integer pages) {
+		this.title = title;
+		this.description = description;
+		this.language = language;
+		this.pages = pages;
+	}
+	
 	public Long getId() {
 		return id;
 	}

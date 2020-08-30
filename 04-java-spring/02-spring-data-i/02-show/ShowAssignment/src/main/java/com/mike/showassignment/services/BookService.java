@@ -30,12 +30,19 @@ public class BookService {
 		return this.bRepo.save(newBook);
 	}
 	
-	//update
+	//create book overloaded from the front end
+	public Book createBook(String title, String description, String language, int pages) {
+		//instantiate, but make sure we have the overloaded method in the model (Book.java) first
+		Book newBook = new Book(title, description, language, pages);
+				return this.bRepo.save(newBook);
+	}
+	
+	//update - Assignment for update delete
 	public Book updateBook(Long id, Book updatedBook) {
 		return this.bRepo.save(updatedBook);
 	}
 	
-	//delete)
+	//delete - Assignment for update delete
 	public void deleteBook(Long id) {
 		this.bRepo.deleteById(id);
 	}

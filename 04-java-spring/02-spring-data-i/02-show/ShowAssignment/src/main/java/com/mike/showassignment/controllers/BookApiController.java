@@ -45,9 +45,23 @@ public class BookApiController {
 	}
 	
 	//delete
-	@RequestMapping("book/delete/{id")
+	@RequestMapping("/book/delete/{id}")
 	public String removeBook(@PathVariable("id") Long id) {
 		this.bService.deleteBook(id);
-		return id + "has been removed from the db";
+		return id + " has been removed from the db";
 	}
+	
+	//update ---- // URL for assignment update/delete: localhost:8080/api/book/update/3 change pages and title:
+	//title: HP
+	//pages: 550
+	//new JSON from PUT:
+	/*{
+	    "id": 3
+	    "title": "HP",
+	    "description": "A boy wizard saving the world",
+	    "language": "English",
+	    "pages": 550,
+	    "createdAt": null,
+	    "updatedAt": "2020-08-30T05:56:08.090+00:00"
+	} */
 }
