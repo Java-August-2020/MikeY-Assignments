@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="song")
@@ -12,11 +15,21 @@ public class Song {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	@Size(min=5, max=45)
 	private String name;
-	private Integer rating;
+	@Min(1)
+	@Max(10)
+	private int rating;
+	@Size(min=5, max=45)
 	private String artist;
 	
 	public Song() {
+	}
+	
+	public Song(String name, String artist, int rating) {
+		this.name = name;
+		this.artist = artist;
+		this.rating = rating;
 	}
 
 	public Long getId() {
@@ -35,11 +48,11 @@ public class Song {
 		this.name = name;
 	}
 
-	public Integer getRating() {
+	public int getRating() {
 		return rating;
 	}
 
-	public void setRating(Integer rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 
