@@ -56,7 +56,7 @@ public class LanguageController {
 //		return "redirect:/";
 //	}
 	
-	@PostMapping("/")
+	@PostMapping("")
 	public String createNew(@Valid @ModelAttribute("language") Language newLanguage, BindingResult result) {
 		if (result.hasErrors()) {
 			return "new.jsp";
